@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: deployment
+metadata:
+  name: myapp
+spec:   
+  selector:
+    matchLabels: 
+      app: nginix
+  template:
+    metadata:
+      labels:
+        app: nginix
+    spec: 
+      containers:
+      - name: danderamesh
+        image: danderamesh/java-web-app      
